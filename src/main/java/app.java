@@ -9,7 +9,7 @@ public class app {
 
         URLreader urLreader = new URLreader();
         //String url = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/274455?apikey=%092SL44VUWl3jjnvN4BkJPMGZaTOseXVHu&language=pl&metric=true";
-        String url = urLreader.getDziennyAdres("Augustów");
+        String url = urLreader.getDziennyAdres("Białystok");
         String jsonString = urLreader.getStringJSON(url);
         GsonBuilder builder = new GsonBuilder();
         builder.setPrettyPrinting();
@@ -27,6 +27,7 @@ public class app {
             System.out.println("W nocy " + d.getNight().getIconPhrase());
         }
 
+        System.out.println("Hello world");
 
 
 
