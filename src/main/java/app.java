@@ -27,7 +27,6 @@ public class app {
             System.out.println("W nocy " + d.getNight().getIconPhrase());
         }
 
-        System.out.println("Hello world");
 
 
 
