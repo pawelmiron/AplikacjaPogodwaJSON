@@ -9,7 +9,7 @@ public class app {
 
         URLreader urLreader = new URLreader();
         //String url = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/274455?apikey=%092SL44VUWl3jjnvN4BkJPMGZaTOseXVHu&language=pl&metric=true";
-        String url = urLreader.getDziennyAdres("Białystok");
+        String url = urLreader.getDziennyAdres("Bargłów Kościelny");
         String jsonString = urLreader.getStringJSON(url);
         GsonBuilder builder = new GsonBuilder();
         builder.setPrettyPrinting();
@@ -17,7 +17,7 @@ public class app {
         Root root = gson.fromJson(jsonString, Root.class);
         System.out.println(root);
         jsonString = gson.toJson(root);
-
+        System.out.println("elo");
         System.out.println(root.getHeadline().getText());
         for (DailyForecasts d: root.getDailyForecasts())
         {System.out.println("Maximum " + d.getTemperature().getMaximum().getValue()+d.getTemperature().getMaximum().getUnit() +
